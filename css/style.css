@@ -783,7 +783,7 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 
 .block .play {
     position: absolute;
-    right: 7px;
+    right: 15px;
     top: 8px;
     background: rgba(0, 0, 0, 0.56);
     border-radius: 10px;
@@ -803,6 +803,12 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
         height: 24px;
         top: calc(50% - 12px);
         font-size: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .block .play {
+        right: 7px;
     }
 }
 
