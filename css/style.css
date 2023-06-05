@@ -480,14 +480,15 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 .contacts .social a.support::after {
     content: "";
     display: block;
-    width: 100%;
+    width: 1em;
     height: 100%;
-    background: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.7);
     position: absolute;
     left: 0;
     top: 0;
     z-index: 1;
-    animation: 3s linear 0s infinite normal ping
+    transform: rotate(45deg) scale(2.5);
+    animation: 3s linear 0s infinite normal animation-blink;
 }
 
 
