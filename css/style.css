@@ -366,7 +366,7 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     gap: 8px;
 
     background: linear-gradient(180deg, rgba(112, 0, 255, 0.13) 0%, rgba(255, 255, 255, 0) 100%);
-    filter: drop-shadow(0px 3px 8px rgba(112, 0, 255, 0.35));
+    box-shadow: 0px 3px 8px rgba(112, 0, 255, 0.35);
     border-radius: 10px;
 
     padding: 5px 7px;
@@ -472,7 +472,26 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     align-items: center;
     justify-content: center;
     gap: 12px;
+    box-shadow: none;
+    overflow: hidden;
 }
+
+.contacts .social a.support::after {
+    content: "";
+    display: block;
+    width: 1rem;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(3px);
+    opacity: .9;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    z-index: 1;
+    transform: rotate(45deg) scale(2.5);
+    animation: 3s linear 0s infinite normal animation-blink
+}
+
 
 .contacts .social a.support::before {
     position: static;
