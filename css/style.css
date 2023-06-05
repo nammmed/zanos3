@@ -262,13 +262,11 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 
 @media (max-width: 992px) {
     .container {
-        padding: 0 20px;
     }
 }
 
 @media (max-width: 374px) {
     .container {
-        padding: 0 10px;
     }
 }
 
