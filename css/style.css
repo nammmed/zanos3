@@ -294,10 +294,12 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 }
 @media (max-width: 576px) {
     .contacts {
-        min-height: 149px;
+        gap: 2.516vw;
+        padding: 1.887vw 3.564vw 1.677vw;
+        border-radius: 4.193vw;
+        min-height: 31.237vw;
     }
 }
-
 
 .contacts .person {
     display: flex;
@@ -308,7 +310,12 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     background: #fff;
     color: #1C1E23;
     box-shadow: 0px 3px 8px rgba(255, 1, 62, 0.25);
+}
 
+@media (max-width: 576px) {
+    .contacts .person {
+        border-radius: 4.193vw;
+    }
 }
 
 .contacts .person .avatar {
@@ -319,7 +326,9 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 }
 
 .contacts .person .avatar img {
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .contacts .person .name {
@@ -341,18 +350,12 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 
 @media (max-width: 576px) {
     .contacts .person .avatar {
-        width: 100px;
-        height: 100px;
+        width: 19.706vw;
+        height: 21.803vw;
+        border-radius: 3.145vw;
     }
     .contacts .person .name {
-        font-size: 13px;
-    }
-}
-
-@media (max-width: 415px) {
-    .contacts .person .avatar {
-        width: 70px;
-        height: 70px;
+        font-size: 2.725vw;
     }
 }
 
@@ -429,33 +432,21 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 
 @media (max-width: 576px) {
     .contacts .social {
-        max-width: 280px;
+        max-width: 60vw;
+        gap: 2.096vw;
+        padding-top: 2.096vw;
     }
     .contacts .social a {
-        font-size: 11px;
-        max-width: calc(50% - 5px);
+        border-radius: 2.096vw;
+        gap: 2.096vw;
+        padding: 1.258vw 1.468vw 0.839vw;
+        font-size: 2.306vw;
+        flex: 0 0 calc(50% - 1.048vw);
     }
     .contacts .social a::before {
-        width: 24px;
-        height: 24px;
+        width: 5.031vw;
+        height: 5.031vw;
         background: no-repeat center / contain;
-    }
-}
-
-@media (max-width: 450px) {
-    .contacts .social  {
-        gap: 1vw;
-    }
-    .contacts .social a {
-        font-size: 2.9vw;
-        padding: 2vw;
-        gap: 2vw;
-        line-height: 5vw;
-    }
-    .contacts .social a::before {
-        width: 5vw;
-        height: 5vw;
-        background: no-repeat left center / contain;
     }
 }
 
@@ -514,8 +505,11 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     position: static;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     .contacts .social a.support {
+        border-radius: 2.096vw 0px;
+        padding: 1.677vw 3.145vw 1.258vw 2.935vw;
+        gap: 2.516vw;
     }
 }
 
