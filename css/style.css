@@ -262,13 +262,26 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     justify-content: space-between;
     align-items: flex-start;
     gap: 12px;
-    margin: 0 0 13px;
+    margin: 0 0 20px;
     padding: 9px 25px 8px 17px;
     background: linear-gradient(180deg, #FFFFFF 36.24%, rgba(112, 0, 255, 0) 540.6%);
     filter: drop-shadow(0px 20px 24px rgba(112, 0, 255, 0.13));
     border-radius: 20px;
-    min-height: 149px;
+    min-height: 189px;
 }
+
+@media (max-width: 768px) {
+    .contacts {
+        min-height: 169px;
+        margin-bottom: 13px;
+    }
+}
+@media (max-width: 576px) {
+    .contacts {
+        min-height: 149px;
+    }
+}
+
 
 .contacts .person {
     display: flex;
@@ -355,6 +368,8 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     background: linear-gradient(180deg, rgba(112, 0, 255, 0.13) 0%, rgba(255, 255, 255, 0) 100%);
     filter: drop-shadow(0px 3px 8px rgba(112, 0, 255, 0.35));
     border-radius: 10px;
+
+    padding: 5px 7px;
 }
 
 .contacts .social a::before {
