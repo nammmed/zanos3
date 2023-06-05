@@ -508,6 +508,7 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
         border-radius: 2.096vw 0px;
         padding: 1.677vw 3.145vw 1.258vw 2.935vw;
         gap: 2.516vw;
+        font-size: 2.096vw;
     }
 }
 
