@@ -370,6 +370,7 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     border-radius: 10px;
 
     padding: 5px 7px;
+    transition: all 0.2s linear;
 }
 
 .contacts .social a::before {
@@ -385,7 +386,7 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 }
 
 .contacts .social a:hover::before {
-    transform: scale(1.2);
+    /*transform: scale(1.2);*/
 }
 
 @media (max-width: 1080px) {
