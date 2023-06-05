@@ -366,8 +366,8 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     justify-content: flex-start;
     gap: 8px;
 
-    background: linear-gradient(180deg, rgba(112, 0, 255, 0.13) 0%, rgba(255, 255, 255, 0) 100%);
-    box-shadow: 0px 3px 8px rgba(112, 0, 255, 0.35);
+    background: linear-gradient(180deg, rgba(255, 1, 62, 0.13) 0%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0px 3px 8px rgba(255, 1, 62, 0.35);
     border-radius: 10px;
 
     padding: 5px 7px;
