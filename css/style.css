@@ -267,6 +267,7 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     background: linear-gradient(180deg, #FFFFFF 36.24%, rgba(112, 0, 255, 0) 540.6%);
     filter: drop-shadow(0px 20px 24px rgba(112, 0, 255, 0.13));
     border-radius: 20px;
+    min-height: 149px;
 }
 
 .contacts .person {
@@ -310,11 +311,18 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 
 @media (max-width: 576px) {
     .contacts .person .avatar {
-        width: 70px;
-        height: 70px;
+        width: 100px;
+        height: 100px;
     }
     .contacts .person .name {
         font-size: 13px;
+    }
+}
+
+@media (max-width: 415px) {
+    .contacts .person .avatar {
+        width: 70px;
+        height: 70px;
     }
 }
 
@@ -335,17 +343,22 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     color: #1C1E23;
     text-transform: uppercase;
     font-size: 20px;
-    padding-left: 40px;
     position: relative;
     transition: all 0.2s linear;
     font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+
+    background: linear-gradient(180deg, rgba(112, 0, 255, 0.13) 0%, rgba(255, 255, 255, 0) 100%);
+    filter: drop-shadow(0px 3px 8px rgba(112, 0, 255, 0.35));
+    border-radius: 10px;
 }
 
 .contacts .social a::before {
     content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 32px;
     height: 32px;
     background: no-repeat left center / 32px;
@@ -387,8 +400,8 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     }
     .contacts .social a {
         line-height: 24px;
-        font-size: 14px;
-        padding-left: 30px;
+        font-size: 11px;
+        padding: 5px 7px;
     }
     .contacts .social a::before {
         width: 24px;
@@ -398,8 +411,19 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 }
 
 @media (max-width: 374px) {
+    .contacts .social  {
+        gap: 1vw;
+    }
     .contacts .social a {
         font-size: 2.9vw;
+        padding: 2vw;
+        gap: 2vw;
+        line-height: 5vw;
+    }
+    .contacts .social a::before {
+        width: 5vw;
+        height: 5vw;
+        background: no-repeat left center / contain;
     }
 }
 
@@ -547,13 +571,10 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     font-size: 16px;
     font-weight: bold;
     line-height: 20px;
-    -webkit-animation: 1s linear animation-heart-beat infinite;
     animation: 1s linear animation-heart-beat infinite;
     text-decoration: none;
     color: #fff;
     border-radius: 40px;
-    -webkit-transition: opacity 0.2s linear;
-    -o-transition: opacity 0.2s linear;
     transition: opacity 0.2s linear;
     text-transform: uppercase;
 }
@@ -743,17 +764,19 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     display: block;
     width: 1rem;
     height: 100%;
-    background: #fff;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(3px);
     opacity: .9;
     position: absolute;
     left: -100%;
     top: 0;
     z-index: 1;
-    -webkit-transform: rotate(45deg) scale(2);
-    -ms-transform: rotate(45deg) scale(2);
-    transform: rotate(45deg) scale(2);
-    -webkit-animation: 3s linear 0s infinite normal animation-blink;
+    transform: rotate(45deg) scale(2.5);
     animation: 3s linear 0s infinite normal animation-blink
+}
+
+.large-block .block-button::after {
+    animation-duration: 6s;
 }
 
 .block:nth-child(2n) .block-button::after {
