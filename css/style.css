@@ -226,15 +226,12 @@ summary {
     flex-direction: column;
     padding: 30px 0;
     text-align: center;
-    background: rgba(114, 22, 198, 1.0);
-    background: -webkit-linear-gradient(top left, rgba(114, 22, 198, .5), rgba(191, 235, 235, 1.0));
-    background: -moz-linear-gradient(top left, rgba(114, 22, 198, .5), rgba(191, 235, 235, 1.0));
-    background: linear-gradient(to bottom right, rgba(114, 22, 198, .5), rgba(191, 235, 235, 1.0));
+    background: #EDEDEE;
 }
 
 @media (max-width: 576px) {
     .page {
-        padding-top: 0;
+        padding: 18px 0;
     }
 }
 
@@ -263,19 +260,13 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 .contacts {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 15px;
-    background: rgba(255,255,255,0.31);
-    border-radius: 10px;
-    margin: 0 0 20px;
-}
-
-@media (max-width: 576px) {
-    .contacts {
-        margin: 0 -15px 10px;
-        border-radius: 0;
-    }
+    align-items: flex-start;
+    gap: 12px;
+    margin: 0 0 13px;
+    padding: 9px 25px 8px 17px;
+    background: linear-gradient(180deg, #FFFFFF 36.24%, rgba(112, 0, 255, 0) 540.6%);
+    filter: drop-shadow(0px 20px 24px rgba(112, 0, 255, 0.13));
+    border-radius: 20px;
 }
 
 .contacts .person {
@@ -283,14 +274,17 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: #FF013E;
+    border-radius: 20px;
+    color: #fff;
 }
 
 .contacts .person .avatar {
     width: 130px;
     height: 130px;
-    border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 4px;
+    border-radius: 15px 15px 10px 10px;
+
 }
 
 .contacts .person .avatar img {
@@ -299,6 +293,9 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 
 .contacts .person .name {
     font-size: 18px;
+    text-transform: uppercase;
+    padding: 5px 0;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -317,7 +314,7 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
         height: 70px;
     }
     .contacts .person .name {
-        font-size: 16px;
+        font-size: 13px;
     }
 }
 
@@ -335,11 +332,13 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     /*flex: 0 0 calc(25% - 10px);*/
     flex: 0 1 auto;
     text-decoration: none;
-    color: #8757ff;
+    color: #1C1E23;
+    text-transform: uppercase;
     font-size: 20px;
     padding-left: 40px;
     position: relative;
     transition: all 0.2s linear;
+    font-weight: bold;
 }
 
 .contacts .social a::before {
@@ -364,6 +363,9 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 @media (max-width: 1080px) {
     .contacts .social {
         flex-wrap: wrap;
+    }
+    .contacts .social a {
+        flex: 0 0 calc(50% - 50px);
     }
 }
 
@@ -395,6 +397,12 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     }
 }
 
+@media (max-width: 374px) {
+    .contacts .social a {
+        font-size: 2.9vw;
+    }
+}
+
 .contacts .social a.soc-in::before {
     background-image: url(../images/icon-in.svg);
 }
@@ -413,6 +421,21 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 
 .contacts .social a.support {
     white-space: nowrap;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #FF013E;
+    border-radius: 10px 0px;
+    padding: 8px 15px 6px 14px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.contacts .social a.support::before {
+    position: static;
 }
 
 @media (max-width: 768px) {
@@ -425,7 +448,7 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 }
 
 .large-block {
-    border-radius: 10px;
+    border-radius: 20px 20px 10px 10px;
     overflow: hidden;
     margin-bottom: 20px;
 }
@@ -433,7 +456,6 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 @media (max-width: 576px) {
     .large-block {
         margin-bottom: 10px;
-        border-radius: 3px;
     }
 }
 
@@ -562,18 +584,17 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 
 .title {
     font-size: 24px;
-    font-weight: bold;
     line-height: 1.2;
     text-transform: uppercase;
-    background: rgba(255,255,255,0.31);
-    padding: 10px 0;
-    border-radius: 10px;
     margin-bottom: 20px;
+    color: #FF013E;
+    font-weight: 800;
 }
 
 @media (max-width: 768px) {
     .title {
         font-size: 18px;
+        margin-bottom: 13px;
     }
 }
 
@@ -645,34 +666,27 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 
 .block {
     padding: 0;
-    background: #8757ff;
     border-radius: 10px;
     overflow: hidden;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 calc(25% - 15px);
     flex: 0 0 calc(25% - 15px);
 }
 
 @media (max-width: 768px) {
     .block {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(50% - 10px);
         flex: 0 0 calc(50% - 10px);
     }
 }
 
 @media (max-width: 576px) {
     .block {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(50% - 5px);
         flex: 0 0 calc(50% - 5px);
-        border-radius: 3px;
     }
 }
 
 .block-image {
     display: block;
     margin-bottom: 0;
+    position: relative;
 }
 
 @media (max-width: 768px) {
@@ -688,14 +702,8 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 }
 
 .block-button {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     min-height: 50px;
     font-size: 16px;
@@ -707,10 +715,9 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     border: 0;
     position: relative;
     overflow: hidden;
-    background: rgba(39,39,62,0.31);
-    -webkit-transition: opacity 0.2s linear;
-    -o-transition: opacity 0.2s linear;
     transition: opacity 0.2s linear;
+    background: #FF013E;
+    box-shadow: 0px 20px 24px rgba(112, 0, 255, 0.13);
 }
 
 @media (max-width: 992px) {
@@ -774,9 +781,42 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 
 }
 
+.block .play {
+    position: absolute;
+    right: 7px;
+    top: 8px;
+    background: rgba(0, 0, 0, 0.56);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 11px;
+    height: calc(100% - 16px);
+}
+
+@media (max-width: 370px) {
+    .block .play {
+        height: 24px;
+        top: calc(50% - 12px);
+        font-size: 10px;
+    }
+}
+
 .footer {
-    color: #8757ff;
-    font-size: 10px;
+    background: linear-gradient(180deg, #FFFFFF 36.24%, rgba(112, 0, 255, 0) 540.6%);
+    filter: drop-shadow(0px 20px 24px rgba(112, 0, 255, 0.13));
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 9px;
+    line-height: 11px;
+
+    color: rgba(0, 0, 0, 0.4);
+    text-align: left;
+    padding: 13px 13px 14px 17px;
 }
 
 
