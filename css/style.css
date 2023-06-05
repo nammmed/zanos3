@@ -1,6 +1,15 @@
 @charset "UTF-8";
 
 @font-face {
+    font-family: 'FairyMuffinRoundPop';
+    src: url('../fonts/FairyMuffinRoundPop.woff2') format('woff2'),
+    url('../fonts/FairyMuffinRoundPop.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+/*
+@font-face {
     font-family: 'Roboto';
     src: url('../fonts/subset-Roboto-Bold.woff2') format('woff2'),
     url('../fonts/subset-Roboto-Bold.woff') format('woff');
@@ -17,7 +26,7 @@
     font-style: normal;
     font-display: swap;
 }
-
+*/
 html {
     line-height: 1.15;
     -ms-text-size-adjust: 100%;
@@ -120,7 +129,7 @@ svg:not(:root) {
 }
 
 button, input, optgroup, select {
-    font-family: sans-serif;
+    font-family: 'FairyMuffinRoundPop', sans-serif;
     font-size: 100%;
     line-height: 1.15;
     margin: 0
@@ -211,7 +220,7 @@ summary {
 
 .page {
     min-height: 100vh;
-    font-family: "Roboto", sans-serif;
+    font-family: "FairyMuffinRoundPop", sans-serif;
     font-size: 16px;
     line-height: 1.25;
     -webkit-font-smoothing: antialiased;
@@ -253,6 +262,12 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 
 @media (max-width: 992px) {
     .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 374px) {
+    .container {
         padding: 0 10px;
     }
 }
@@ -263,12 +278,12 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     align-items: flex-start;
     gap: 12px;
     margin: 0 0 20px;
-    padding: 9px 25px 8px 17px;
-    background: linear-gradient(180deg, #FFFFFF 36.24%, rgba(112, 0, 255, 0) 540.6%);
-    filter: drop-shadow(0px 20px 24px rgba(112, 0, 255, 0.13));
+    padding: 9px 17px 8px;
+    background: #fff;
     border-radius: 20px;
     min-height: 189px;
     position: relative;
+    box-shadow: 0px 3px 8px rgba(255, 1, 62, 0.25);
 }
 
 @media (max-width: 768px) {
@@ -289,17 +304,18 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #FF013E;
     border-radius: 20px;
-    color: #fff;
+    background: #fff;
+    color: #1C1E23;
+    box-shadow: 0px 3px 8px rgba(255, 1, 62, 0.25);
+
 }
 
 .contacts .person .avatar {
     width: 130px;
     height: 130px;
     overflow: hidden;
-    border-radius: 15px 15px 10px 10px;
-
+    border-radius: 15px;
 }
 
 .contacts .person .avatar img {
@@ -310,7 +326,7 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     font-size: 18px;
     text-transform: uppercase;
     padding: 5px 0;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 @media (max-width: 768px) {
@@ -319,7 +335,7 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
         height: 100px;
     }
     .contacts .person .name {
-        font-size: 16px;
+        font-size: 13px;
     }
 }
 
@@ -346,20 +362,21 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     align-items: center;
     text-align: left;
     gap: 30px;
+    padding-top: 10px;
     /*padding-bottom: 20px;*/
 }
 
 .contacts .social a {
-    line-height: 32px;
+    line-height: 1;
     /*flex: 0 0 calc(25% - 10px);*/
     flex: 0 1 auto;
     text-decoration: none;
-    color: #1C1E23;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 16px;
     position: relative;
     transition: all 0.2s linear;
-    font-weight: bold;
+    font-weight: 500;
+    color: #1C1E23;
 
     display: flex;
     align-items: center;
@@ -370,7 +387,7 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     box-shadow: 0px 3px 8px rgba(255, 1, 62, 0.35);
     border-radius: 10px;
 
-    padding: 5px 7px;
+    padding: 6px 7px 4px;
     transition: all 0.2s linear;
 }
 
@@ -378,8 +395,8 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     content: '';
     width: 32px;
     height: 32px;
-    background: no-repeat left center / 32px;
-    transition: transform 0.2s linear;
+    background: no-repeat left center / contain;
+    transform: translateY(-1px);
 }
 
 .contacts .social a:hover {
@@ -416,14 +433,12 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
         max-width: 280px;
     }
     .contacts .social a {
-        line-height: 24px;
         font-size: 11px;
-        padding: 5px 7px;
     }
     .contacts .social a::before {
         width: 24px;
         height: 24px;
-        background: no-repeat left center / 24px;
+        background: no-repeat center / contain;
     }
 }
 
@@ -465,7 +480,6 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     position: absolute;
     right: 0;
     bottom: 0;
-    background: #FF013E;
     border-radius: 10px 0px;
     padding: 8px 15px 6px 14px;
     color: #fff;
@@ -475,6 +489,9 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     gap: 12px;
     box-shadow: none;
     overflow: hidden;
+    background: linear-gradient(180deg, #FF013E 0%, #C90060 100%);
+    font-size: 10px;
+    font-weight: 500;
 }
 
 .contacts .social a.support::after {
@@ -643,7 +660,7 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     text-transform: uppercase;
     margin-bottom: 20px;
     color: #FF013E;
-    font-weight: 800;
+    font-weight: 500;
 }
 
 @media (max-width: 768px) {
@@ -655,7 +672,7 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 
 @media (max-width: 576px) {
     .title {
-        margin-bottom: 10px;
+        margin-bottom: 7px;
         border-radius: 3px;
     }
 }
@@ -762,7 +779,7 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     justify-content: center;
     min-height: 50px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 500;
     text-transform: uppercase;
     border-radius: 0;
     color: #fff;
@@ -771,8 +788,7 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     position: relative;
     overflow: hidden;
     transition: opacity 0.2s linear;
-    background: #FF013E;
-    box-shadow: 0px 20px 24px rgba(112, 0, 255, 0.13);
+    background: linear-gradient(180deg, #FF013E 0%, #C90060 100%);
 }
 
 @media (max-width: 992px) {
@@ -844,7 +860,7 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
     color: #fff;
     font-size: 14px;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -867,10 +883,10 @@ h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 }
 
 .footer {
-    background: linear-gradient(180deg, #FFFFFF 36.24%, rgba(112, 0, 255, 0) 540.6%);
-    filter: drop-shadow(0px 20px 24px rgba(112, 0, 255, 0.13));
+    background: linear-gradient(180deg, #FFC0CF 0%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0px 3px 8px rgba(255, 1, 62, 0.25);
     border-radius: 20px;
-    font-weight: 800;
+    font-weight: 500;
     font-size: 9px;
     line-height: 11px;
 
